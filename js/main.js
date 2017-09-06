@@ -2,26 +2,30 @@ var firstNumber = document.getElementById('firstNumber');
 var secondNumber = document.getElementById('secondNumber');
 var operation = document.getElementById('operation');
 
-var isBudiHandsome = true;
-var isYantiBeautiful = false;
-
-// true && true = true
-// true && false = false
-// false && false = false
-// true || false = true
-// false || true = true
-// true || true = true
-// false || false = false
-
-
 function checkOperationAndExecute(){
-  if(isBudiHandsome && isYantiBeautiful){
-    console.log('yes both of them');
-  }else if(isYantiBeautiful == false){
-    console.log('gpp walaupun ga beautiful')
+  var first = Number(firstNumber.value);
+  var second = Number(secondNumber.value);
+  var finalOperation = operation.value.toLowerCase();
+
+  if(finalOperation == "add"){
+    add();
+  }else if(finalOperation == "divide"){
+    divide();
   }else{
-    console.log('terserah');
+    console.log("operation not found");
   }
 }
 
-checkOperationAndExecute();
+function add(){
+  var first = Number(firstNumber.value);
+  var second = Number(secondNumber.value);
+
+  console.log(first + second);
+}
+
+function divide(){
+  var first = Number(firstNumber.value);
+  var second = Number(secondNumber.value);
+
+  console.log(first / second);
+}

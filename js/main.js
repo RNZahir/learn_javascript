@@ -1,31 +1,15 @@
-var firstNumber = document.getElementById('firstNumber');
-var secondNumber = document.getElementById('secondNumber');
-var operation = document.getElementById('operation');
+var animals = ['cat', 'tiger','godzila', 'dog'];
 
-function checkOperationAndExecute(){
-  var first = Number(firstNumber.value);
-  var second = Number(secondNumber.value);
-  var finalOperation = operation.value.toLowerCase();
+//add new animal into animals array
+animals.push('bat');
 
-  if(finalOperation == "add"){
-    add();
-  }else if(finalOperation == "divide"){
-    divide();
-  }else{
-    console.log("operation not found");
-  }
-}
+//remove animal from animals array
+animals.pop();
 
-function add(){
-  var first = Number(firstNumber.value);
-  var second = Number(secondNumber.value);
+//sort by name ASC
+animals.sort();
 
-  console.log(first + second);
-}
+//sort by name DESC
+animals.reverse();
 
-function divide(){
-  var first = Number(firstNumber.value);
-  var second = Number(secondNumber.value);
-
-  console.log(first / second);
-}
+console.log(animals)
